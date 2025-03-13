@@ -3,11 +3,10 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "serve -s frontend/dist/healthcare-portal/browser -l 3000",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-    "serve:ssr:healthcare-portal": "node dist/healthcare-portal/server/server.mjs"
+    "test": "ng test"
   },
   "private": true,
   "dependencies": {
@@ -24,7 +23,8 @@
     "express": "^4.18.2",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.15.0"
+    "zone.js": "~0.15.0",
+    "serve": "^14.1.1"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^19.2.0",
