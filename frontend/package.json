@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "serve -s frontend/dist/healthcare-portal/browser/browser -l 3000",
+    "start": "serve -s frontend/dist/healthcare-portal/browser/browser -l 7000",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"

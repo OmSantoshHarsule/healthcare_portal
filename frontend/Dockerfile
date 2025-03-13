@@ -20,8 +20,8 @@ RUN npm run build --prod
 RUN npm install -g serve
 
 # Expose port 3000 for accessing the app
-EXPOSE 3000
+EXPOSE 7000
 
 # Serve the built Angular app from dist/healthcare-portal/browser on port 3000
-CMD ["serve", "-s", "dist/healthcare-portal/browser/browser", "-l", "3000", "--single"]
+CMD ["serve", "-s", "dist/healthcare-portal/browser/browser", "-l", "7000", "--single"]
 
