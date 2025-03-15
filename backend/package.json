@@ -3,8 +3,9 @@
   "version": "1.0.0",
   "main": "dist/server.js",
   "scripts": {
+    "build": "tsc && cp .env dist/",
     "start": "node dist/server.js",
-    "build": "tsc"
+    "start:prod": "NODE_ENV=production node dist/server.js"
   },
   "keywords": [],
   "author": "",
@@ -31,7 +32,7 @@
     "@types/express": "^4.17.21",
     "@types/jsonwebtoken": "^9.0.9",
     "@types/mongoose": "^5.11.96",
-    "@types/node": "^22.13.8",
+    "@types/node": "^22.13.10",
     "ts-node": "^10.9.2",
     "typescript": "^5.8.2"
   }

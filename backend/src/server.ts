@@ -5,6 +5,7 @@ const path = require("path"); // Utility for handling file paths
 const multer = require("multer"); // Middleware for handling file uploads
 const fs = require("fs"); // File system module for working with files
 const cors = require("cors"); // CORS middleware for cross-origin requests
+
 const mongoose = require("mongoose"); // MongoDB ODM
 
 // Import Google Generative AI SDK

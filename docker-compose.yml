@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  frontend:
+    build:
+      context: ./frontend          # Path to the frontend folder
+      dockerfile: Dockerfile        # Explicitly reference the Dockerfile in the frontend folder
+    ports:
+      - "7000:7000"                     # Exposing port 80 for the frontend container
+    depends_on:
+      - backend                     # Make sure the backend starts before the frontend
+    networks:
+      - app-network
+
+  backend:
+    build:
+      context: ./backend           # Path to the backend folder
+      dockerfile: Dockerfile        # Explicitly reference the Dockerfile in the backend folder
+    environment:
+      - MONGO_URI= mongodb+srv://user:zJJ7HeVtX2o1rlcM@cluster0.vd00x.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
+      - PORT=5000                   # Set the backend port
+    ports:
+      - "5000:5000"                 # Exposing port 5000 for the backend container
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
